@@ -33,7 +33,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.5rem 0;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid #272626;
     }
 
     .brand {
@@ -54,6 +54,12 @@
       text-decoration: none;
       transition: color 0.3s;
     }
+    .navbar-links div{
+      color: #aaa;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
     a {
       color: #aaa;
       cursor: pointer;
@@ -65,6 +71,10 @@
     }
 
     .navbar-links li:hover {
+      color: white;
+    }
+
+    .navbar-links div:hover {
       color: white;
     }
 
@@ -167,6 +177,44 @@
         justify-content: center;
       }
     }
+
+    .skill-ka-part {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.skill-ka-part h4 {
+  color: #aaa;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skills-list li {
+  background: #151515;
+  border: 1px solid #2e2e2e;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  color: #f0f0f0;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.skills-list li:hover {
+  transform: scale(1.1);
+  background-color: #1d1d1d;
+}
   </style>
 </head>
 <body>
@@ -175,7 +223,7 @@
       <div class="brand">Devansh Sharma</div>
       <div class="navbar-links">
         <a href="#" onclick="location.reload(); return false;">Home</a>
-      <div style="color:#aaa">About</div>
+
       <a href="https://github.com/DevanshSharma351?tab=repositories">Projects</a>
       </div>
       <ul class="navbar-links">
@@ -198,13 +246,32 @@
           Welcome! I am an eager Computer Science Sophomore at NIT Surathkal passionate about tech and coding. I am currently working on building fast, accessible, and visually engaging web experiences.
           I am also proficient in Data Structures and Algorithms. Let’s create something amazing together! 😉
         </p>
-        <button class="start-button">Start the journey →</button>
+        <a href="https://github.com/DevanshSharma351?tab=repositories" class="start-button">Start the Journey →</a>
       </div>
 
       <div class="profile-box">
         <img src="https://res.cloudinary.com/dp3l6xf5j/image/upload/v1749721199/devansh_kijixw.png" alt="Devansh Sharma" />
       </div>
     </section>
+
+    <section class="skill-ka-part">
+  <h4>Skills</h4>
+  <ul class="skills-list">
+    <li>HTML & CSS</li>
+    <li>JavaScript</li>
+    <li>TypeScript</li>
+    <li>React.js</li>
+    <li>Node.js</li>
+    <li>Express.js</li>
+    <li>MongoDB</li>
+    <li>Git & GitHub</li>
+    <li>Java</li>
+    <li>Data Structures & Algorithms</li>
+    <li>Machine Learning</li>
+   
+  </ul>
+  <br><br>
+</section>
 
     <section class="brands-section">
       <h4>Interests or worked-with</h4>
