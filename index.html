@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <head>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7867/7867852.png" type="image/png">
-</head>
-<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devansh Sharma | Web Portfolio</title>
   <style>
     * {
@@ -15,19 +14,18 @@
     }
 
     body {
-  font-family: 'Roboto', sans-serif;
-    }
-
-     body, h1, h2, p {
-    font-family: 'Sen', sans-serif;
-  }
-    body {
       background-color: #0e0e0e;
       color: #f0f0f0;
       font-family: 'Helvetica Neue', sans-serif;
-      padding: 0 1rem;
-      padding-left: 25px;
-      padding-right: 25px;
+      padding: 0 25px;
+      height: 100%;
+      margin: 0;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -44,34 +42,39 @@
       letter-spacing: 1px;
     }
 
-    .nav-links {
+    .navbar-links {
       display: flex;
       gap: 1.5rem;
       list-style: none;
     }
 
-    .nav-links li {
+    .navbar-links li{
       color: #aaa;
       cursor: pointer;
+      text-decoration: none;
       transition: color 0.3s;
     }
-
-    .nav-links li:hover {
-      color: white;
-    }
-    a{
-        text-decoration: none;
-        color: #aaa;
+    a {
+      color: #aaa;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.3s;
     }
     a:hover {
       color: white;
     }
+
+    .navbar-links li:hover {
+      color: white;
+    }
+
     .intro-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       padding: 3rem 0;
+      flex: 1;
     }
 
     .intro-text {
@@ -127,9 +130,9 @@
     }
 
     .brands-section {
-      margin-top: 4rem;
       text-align: center;
-      bottom: 20px;
+      margin-top: auto;
+      padding-bottom: 2rem;
     }
 
     .brands-section h4 {
@@ -167,51 +170,54 @@
   </style>
 </head>
 <body>
-
-  <header>
-    <div class="brand">Devansh Sharma</div>
-    <ul class="nav-links">
-      <a href="#" onclick="location.reload(); return false;">Home</a>
-      <li>About</li>
+  <div class="main-container">
+    <header>
+      <div class="brand">Devansh Sharma</div>
+      <div class="navbar-links">
+        <a href="#" onclick="location.reload(); return false;">Home</a>
+      <div style="color:#aaa">About</div>
       <a href="https://github.com/DevanshSharma351?tab=repositories">Projects</a>
-      <a href="https://www.linkedin.com/in/devansh-sharma-835a0a316/"><strong>in</strong></a>
-      <li><strong>Be</strong></li>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-      <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" viewBox="0 0 24 24">
-      <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.3 2.4.5.6.3 1.1.6 1.5 1.1.4.4.8.9 1.1 1.5.2.5.4 1.2.5 2.4.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.9-.5 2.4-.3.6-.6 1.1-1.1 1.5-.4.4-.9.8-1.5 1.1-.5.2-1.2.4-2.4.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.3-2.4-.5-.6-.3-1.1-.6-1.5-1.1-.4-.4-.8-.9-1.1-1.5-.2-.5-.4-1.2-.5-2.4-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.3-1.9.5-2.4.3-.6.6-1.1 1.1-1.5.4-.4.9-.8 1.5-1.1.5-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1c-1.3.1-2.3.3-3.2.7C3 .9 2.3 1.3 1.7 1.9.9 2.7.5 3.4.2 4.4c-.4.9-.6 1.9-.7 3.2C-.1 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.1 1.3.3 2.3.7 3.2.3.9.7 1.7 1.5 2.5.6.6 1.3 1.1 2.1 1.4.9.4 1.9.6 3.2.7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.3-.3 3.2-.7.9-.3 1.7-.8 2.5-1.5.6-.6 1.1-1.3 1.4-2.1.4-.9.6-1.9.7-3.2.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.3-.7-3.2-.3-.9-.8-1.7-1.5-2.5-.6-.6-1.3-1.1-2.1-1.4-.9-.4-1.9-.6-3.2-.7C15.7 0 15.3 0 12 0z"/>
-      <path d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2S8.6 18.2 12 18.2s6.2-2.8 6.2-6.2S15.4 5.8 12 5.8zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/>
-      <circle cx="18.4" cy="5.6" r="1.4"/>
-    </svg>
-  </a>
-    </ul>
-  </header>
+      </div>
+      <ul class="navbar-links">
+        <a href="https://www.linkedin.com/in/devansh-sharma-835a0a316/"><strong>in</strong></a>
+        <li><strong>Be</strong></li>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <!-- Instagram SVG here -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" viewBox="0 0 24 24">
+            <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.3 2.4.5.6.3 1.1.6 1.5 1.1.4.4.8.9 1.1 1.5.2.5.4 1.2.5 2.4.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.9-.5 2.4-.3.6-.6 1.1-1.1 1.5-.4.4-.9.8-1.5 1.1-.5.2-1.2.4-2.4.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.3-2.4-.5-.6-.3-1.1-.6-1.5-1.1-.4-.4-.8-.9-1.1-1.5-.2-.5-.4-1.2-.5-2.4-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.3-1.9.5-2.4.3-.6.6-1.1 1.1-1.5.4-.4.9-.8 1.5-1.1.5-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1c-1.3.1-2.3.3-3.2.7C3 .9 2.3 1.3 1.7 1.9.9 2.7.5 3.4.2 4.4c-.4.9-.6 1.9-.7 3.2C-.1 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.1 1.3.3 2.3.7 3.2.3.9.7 1.7 1.5 2.5.6.6 1.3 1.1 2.1 1.4.9.4 1.9.6 3.2.7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.3-.3 3.2-.7.9-.3 1.7-.8 2.5-1.5.6-.6 1.1-1.3 1.4-2.1.4-.9.6-1.9.7-3.2.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.3-.7-3.2-.3-.9-.8-1.7-1.5-2.5-.6-.6-1.3-1.1-2.1-1.4-.9-.4-1.9-.6-3.2-.7C15.7 0 15.3 0 12 0z"/>
+            <path d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2S8.6 18.2 12 18.2s6.2-2.8 6.2-6.2S15.4 5.8 12 5.8zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/>
+            <circle cx="18.4" cy="5.6" r="1.4"/>
+          </svg>
+        </a>
+      </ul>
+    </header>
 
-  <section class="intro-section">
-    <div class="intro-text">
-      <h2 style="font-size: 35px;">Hi, I'm Devansh<br />Full Stack Web Developer</h2>
-      <p>
-        Welcome! I am an eager Computer Science Sophomore at NIT Surathkal passionate about tech and coding.I am currently working on building fast, accessible, and visually engaging web experiences.
-        I am also prolificient in Data Structures and Algorithms. Let’s create something amazing together! 😉
-      </p>
-      <button class="start-button">Start the journey &rarr;</button>
-    </div>
+    <section class="intro-section">
+      <div class="intro-text">
+        <h2 style="font-size: 35px;">Hi, I'm Devansh<br />Full Stack Web Developer</h2>
+        <p>
+          Welcome! I am an eager Computer Science Sophomore at NIT Surathkal passionate about tech and coding. I am currently working on building fast, accessible, and visually engaging web experiences.
+          I am also proficient in Data Structures and Algorithms. Let’s create something amazing together! 😉
+        </p>
+        <button class="start-button">Start the journey →</button>
+      </div>
 
-    <div class="profile-box">
-      <img src="./assets/devansh.png" alt="Devansh Sharma" />
-    </div>
-  </section>
+      <div class="profile-box">
+        <img src="./assets/devansh.png" alt="Devansh Sharma" />
+      </div>
+    </section>
 
-  <section class="brands-section">
-    <h4>Interests or worked-with</h4>
-    <div class="brands-grid">
-      <div class="brand-card">Google</div>
-      <div class="brand-card">Microsoft</div>
-      <div class="brand-card">Amazon</div>
-      <div class="brand-card">Apple</div>
-      <div class="brand-card">Meta</div>
-      <div class="brand-card">IEEE</div>
-    </div>
-  </section>
-
+    <section class="brands-section">
+      <h4>Interests or worked-with</h4>
+      <div class="brands-grid">
+        <div class="brand-card">Google</div>
+        <div class="brand-card">Microsoft</div>
+        <div class="brand-card">Amazon</div>
+        <div class="brand-card">Apple</div>
+        <div class="brand-card">Meta</div>
+        <div class="brand-card">IEEE</div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
