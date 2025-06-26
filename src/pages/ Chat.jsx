@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useAuth0 } from "@auth0/auth0-react"
-import getKey from "../../key"
 
 const Chat = () => {
   const { isAuthenticated, loginWithRedirect, isLoading, user } = useAuth0()
@@ -19,7 +18,7 @@ const Chat = () => {
     setError("")
 
     try {
-      let key=getKey();
+      const key = import.meta.env.VITE_GEMINI_API_KEY;
       const link = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`
       const res = await fetch(
         link,
