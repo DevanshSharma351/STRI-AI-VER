@@ -44,7 +44,7 @@ const DSA = () => {
   return (
     <div className="min-h-screen px-6 py-10 bg-gradient-to-br from-gray-50 to-white dark:from-zinc-900 dark:to-zinc-800">
       <h1 className="text-4xl font-bold text-center mb-10 text-violet-600 dark:text-violet-400">
-        Competitive Programming Tracker
+        Striver DSA Sheet
       </h1>
 
       {!isAuthenticated && (
